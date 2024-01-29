@@ -28,6 +28,7 @@
 
             <!-- Result -->
             <div class="result" v-if="result">
+                <a href="#" class="result__toggle-favorite" @click="addFavorite">Add Favorite ⭐</a>
                 <h2 class="result__name">{{ result.name }}</h2>
                 <img v-bind:src="result.avatar_url" :alt="result.name" class="result__avatar">
                 <!-- no hace falta usar v-bind si a continuación lo vas a seguir usando. Con poner los : y su atributo es suficiente. -->
