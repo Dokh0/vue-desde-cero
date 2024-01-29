@@ -28,17 +28,17 @@
 
             <!-- Result -->
             <div class="result" v-if="result">
-                <h2 class="result__name">Juan Andrés Núñez</h2>
-                <img src="https://avatars.githubusercontent.com/u/8166774?v=4" alt="" class="result__avatar">
-                <p class="result__bio">Especialista en JavaScript y Vue.js. Formador profesional de desarrolladores/as
-                    Web. Practicante de estoicismo.
+                <h2 class="result__name">{{ result.name }}</h2>
+                <img v-bind:src="result.avatar_url" :alt="result.name" class="result__avatar">
+                <!-- no hace falta usar v-bind si a continuación lo vas a seguir usando. Con poner los : y su atributo es suficiente. -->
+                <p class="result__bio">{{ result.bio }}
                     <br>
-                    <a href="http://www.wmedia.es" class="result__blog">http://www.wmedia.es</a>
+                    <a v-bind:href="result.blog" target="_blank" class="result__blog">{{ result.blog }}</a>
                 </p>
             </div>
             <p v-else>Search again</p>
             <!-- Error -->
-            <div class="result__error" v-if="error">Error</div>
+            <div class="result__error" v-if="error">{{ error }}</div>
         </article>
     </div>
     <script src="js/main.js"></script>

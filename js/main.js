@@ -17,11 +17,11 @@ const app = Vue.createApp({
             try {
                 const response = await fetch(API + this.search)
                 if (!response.ok) { //si la respuesa no es OK (campo en consola)
-                    throw Error("User not found.")
+                    throw Error("User not found")
                 }
                 const data = await response.json()
                 console.log(data)
-                this.result = true
+                this.result = (data)
             } catch (error) {
                 this.error = error
             } finally {
