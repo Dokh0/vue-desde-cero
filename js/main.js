@@ -6,7 +6,7 @@ const app = Vue.createApp({
     data() {
         return {
             search: null,
-            // message: "Hello Vue!",
+            //message: "Hello Vue!",
             //message = propiedad reactiva dentro del modelo
             result: null,
             error: null,
@@ -85,4 +85,3 @@ const app = Vue.createApp({
         }
     }
 })
-
