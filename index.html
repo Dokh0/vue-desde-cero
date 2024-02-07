@@ -15,7 +15,7 @@
         <!-- Favorites -->
         <div class="favorites">
             <transition-group name="list">
-            <div class="favorite" v-for="favorite in allFavorites">
+            <div class="favorite" v-for="favorite in allFavorites" >
                 <a @click.prevent="showFavorite(favorite)" href="#" target="_blank">
                     <img v-bind:src="favorite.avatar_url" alt="favorite.name" class="favorite_avatar">
                 </a>
